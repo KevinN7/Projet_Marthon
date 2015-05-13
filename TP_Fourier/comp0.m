@@ -17,6 +17,7 @@ for tmask=1:min(nlig,ncol)
     imagesc(abs(imfc0));
     subplot(1,2,2);
     colormap(gray);
-    imagesc(abs(ifft2(imfc0)));
+    imgcom=abs(ifft2(imfc0));
+    imagesc(imgcom);
     pause
 end;

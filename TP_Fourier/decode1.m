@@ -19,3 +19,20 @@
 %jobj.comp_info,
 %jobj.progressive_mode
 %
+
+jobj = jpeg_read('Images/Lena.jpg');
+coefscell=jobj.coef_arrays;
+coefs = coefscell{1,1}
+
+indices = 1:8:512;
+for i=indices
+    for j=indices
+        M=coefs(i:i+7,j:j+7);
+        dec1(i:i+7,j:j+7)=ifft2(M);
+    end;
+end;
+
+img = abs(dec1+255);
+figure;
+colormap(gray);
+imagesc(img);

@@ -25,3 +25,12 @@
 %
 
 jobj = jpeg_read('Images/Lena.jpg');
+coefscell=jobj.coef_arrays;
+coefs = coefscell{1,1}
+indices = 1:8:512;
+dec0 = coefs(indices,indices)
+img = abs(dec0+255);
+figure;
+colormap(gray);
+imagesc(img);
+%jobj.quant_tables
