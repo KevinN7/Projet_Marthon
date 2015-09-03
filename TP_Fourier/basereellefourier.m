@@ -15,8 +15,8 @@ basef = zeros(n,n) ;
 %
 if rep == 'c'
     if u == 0 && v == 0
-        basef(u+1,v+1)= ' ? ?' ;
-        basef(n+1-u,n+1-v)= ' ? ?' ;
+        basef(u+1,v+1)=;
+        basef(n+1-u,n+1-v)=;
     elseif u == 0
         basef(1,v+1)= ' ? ?' ;
         basef(1, n+1-v)= ' ? ?' ;
